@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Montserrat', system-ui, -apple-system, sans-serif;
+    --tea-gold: #e5c158;
+    --tea-gold-dim: #c9a63e;
+    --tea-cyan: #00f2fe;
+    --bg-base: #090d16;
+    --bg-surface: #0e1424;
+    --bg-elevated: #131b30;
+  }
+
+  * {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif !important;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: #f1f5f9;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6, input, button, select, textarea {
+    font-family: 'Montserrat', sans-serif !important;
+  }
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(229, 193, 88, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(229, 193, 88, 0.6);
+}
+
+/* Number input styling */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 0.3;
+}
+
+/* Glassmorphism styling */
+.glass-panel {
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  background: rgba(14, 20, 36, 0.85);
+  border: 1px solid rgba(229, 193, 88, 0.18);
+}
+
+/* Subtle glow helpers */
+.glow-gold {
+  box-shadow: 0 0 24px rgba(229, 193, 88, 0.28);
+}
+.glow-cyan {
+  box-shadow: 0 0 24px rgba(0, 242, 254, 0.25);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

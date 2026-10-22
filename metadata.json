@@ -1,0 +1,6 @@
+{
+  "name": "Kingshot Bear Trap Calculator",
+  "description": "Optimize troop splits across Infantry, Cavalry, and Archers for Kingshot Bear Trap rallies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

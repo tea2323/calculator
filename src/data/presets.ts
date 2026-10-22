@@ -1,0 +1,47 @@
+import { RatioPreset } from '../types';
+
+export const RATIO_PRESETS: RatioPreset[] = [
+  {
+    id: 'attack',
+    name: 'Attack',
+    shortLabel: '50 / 20 / 30',
+    description: 'Balanced offensive formation with heavy infantry frontline. Ideal for aggressive bear trap rushes.',
+    infantryPct: 50,
+    cavalryPct: 20,
+    archersPct: 30,
+    badge: 'Attack',
+    icon: '⚔️',
+  },
+  {
+    id: 'garrison',
+    name: 'Garrison',
+    shortLabel: '60 / 20 / 20',
+    description: 'High infantry wall with balanced flanks. Best for holding positions and garrison defense.',
+    infantryPct: 60,
+    cavalryPct: 20,
+    archersPct: 20,
+    badge: 'Garrison',
+    icon: '🏰',
+  },
+  {
+    id: 'bear-trap',
+    name: 'Bear Trap',
+    shortLabel: '10 / 10 / 80',
+    description: 'Maximum archer output for bear trap events. Archers deal ~4× damage — fill as many as possible.',
+    infantryPct: 10,
+    cavalryPct: 10,
+    archersPct: 80,
+    badge: 'Bear Trap',
+    icon: '🏹',
+  },
+  {
+    id: 'custom',
+    name: 'Custom',
+    shortLabel: 'Manual %',
+    description: 'Manually define your own Infantry / Cavalry / Archers percentage split.',
+    infantryPct: 33,
+    cavalryPct: 33,
+    archersPct: 34,
+    icon: '⚙️',
+  },
+];
